@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bot.ro-mihaiu.xyz/sitemap.xml
+

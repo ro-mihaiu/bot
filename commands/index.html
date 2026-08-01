@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commands — MIHULISH Discord Bot</title>
+  <meta name="description" content="Every command of the MIHULISH Discord bot for the MIHU player-warp server. Slash and prefix commands, usage examples, and [STAFF] access badges." />
+  <meta name="keywords" content="MIHULISH, MIHU bot, Discord bot, commands, verify, rank, player warps, BlossomCraft" />
+  <meta property="og:title" content="Commands — MIHULISH Discord Bot" />
+  <meta property="og:description" content="Full command reference for the MIHULISH Discord bot." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bot.ro-mihaiu.xyz/commands" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="canonical" href="https://bot.ro-mihaiu.xyz/commands" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🌸%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="page-wrap">
+    <!-- Sakura petal background -->
+    <div class="petals" aria-hidden="true">
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="../index.html">
+          MIHULISH <span class="brand-badge">Bot</span>
+        </a>
+        <nav class="nav-links" aria-label="Bot pages">
+          <a href="index.html" class="active" aria-current="page">Commands</a>
+          <span class="sep">|</span>
+          <a href="../about/index.html">About</a>
+          <span class="sep">|</span>
+          <a href="../tos/index.html">ToS</a>
+          <span class="sep">·</span>
+          <a href="https://ro-mihaiu.xyz" target="_blank" rel="noopener noreferrer">Main site ↗</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+      <div class="container">
+        <div class="hero">
+          <p class="eyebrow">MIHULISH · Command Reference</p>
+          <h1 class="page-title">Commands</h1>
+          <p class="lead">
+            Everything the MIHU bot can do. Commands marked <strong style="color:#ffc7de">[STAFF]</strong> can
+            only be run by staff — every other command is available to all members.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 id="verification">Verification</h2>
+            <span class="count">6 commands</span>
+          </div>
+          <table class="cmd-table">
+            <thead>
+              <tr><th>Command</th><th>Access</th><th>Description</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/verify <span class="arg"><in-game-user></span> <span class="arg"><rank></span></code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Verifies yourself: sets your nickname to <code class="cmd-name">🌸 <in-game-user></code> and stores your rank. Ranks: Celestial, Immortal, Emperor, Shogun, Samurai, Sensei, Elder, Ronin, Shinobi, Guardian, Warrior, Ranger, Nomad, Wanderer.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">verify</span> Mihaitzuuu Celestial</span>
+                    <span class="example"><span class="prompt">.</span><span class="slash">verify</span> Mihaitzuuu Celestial</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/rank update <span class="arg"><rank></span></code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Sends a rank-change request to the staff channel.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">rank</span> update Samurai</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/rank change <span class="arg">@member</span> <span class="arg"><rank></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Change a member&rsquo;s rank (also assigns the matching Discord role if one exists).</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">rank</span> change @Elite Celestial</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/unverify <span class="arg">@member</span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Completely removes a member from the bot records.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">unverify</span> @User</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/trust <span class="arg">@member</span> <span class="arg"><location></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Marks a member as trusted at a location (DMs the member). Locations: mihu-farm, mihu-rentals, mihu-shop, mihu-casino, mihu-money, dungeon.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">trust</span> @Elite mihu-farm</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/untrust <span class="arg">@member</span> <span class="arg"><location></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Removes trust at a location (DMs the member). Same locations.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">untrust</span> @Elite mihu-farm</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 id="moderation">Moderation</h2>
+            <span class="count">4 commands</span>
+          </div>
+          <table class="cmd-table">
+            <thead>
+              <tr><th>Command</th><th>Access</th><th>Description</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/warn add <span class="arg">@member</span> <span class="arg"><reason></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Issues a warning with a unique ID (DMs the member).</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">warn</span> add @Elite griefed a build</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/warn remove <span class="arg"><id></span> <span class="arg"><reason></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Removes a warning by its ID (DMs the member).</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">warn</span> remove 4 resolved</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/warnings</code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Shows your own warnings.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">warnings</span></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/warns <span class="arg">@member</span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Shows a member&rsquo;s warnings.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">warns</span> @Elite</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 id="rewards">Rewards</h2>
+            <span class="count">7 commands</span>
+          </div>
+          <table class="cmd-table">
+            <thead>
+              <tr><th>Command</th><th>Access</th><th>Description</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/points add <span class="arg">@member</span> <span class="arg"><amount></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Adds reward points (max 100).</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">points</span> add @Elite 10</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/points remove <span class="arg">@member</span> <span class="arg"><amount></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Removes reward points.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">points</span> remove @Elite 5</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/points view</code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Shows your points (DMs you when at max capacity).</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">points</span> view</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/points check</code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Shows all point balances.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">points</span> check</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/wof</code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Shows the Wall of Fame.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">wof</span></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/wof add <span class="arg">@member</span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Adds a member to the Wall of Fame.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">wof</span> add @Elite</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/wof remove <span class="arg">@member</span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Removes a member from the Wall of Fame.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">wof</span> remove @Elite</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 id="shop">Shop</h2>
+            <span class="count">3 commands</span>
+          </div>
+          <table class="cmd-table">
+            <thead>
+              <tr><th>Command</th><th>Access</th><th>Description</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/item add <span class="arg"><name></span> <span class="arg"><bulk/individual></span> <span class="arg"><price></span> <span class="arg"><min_amount></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Adds a shop item.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">item</span> add Diamonds bulk 100 5</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/item remove <span class="arg"><name></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Removes a shop item.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">item</span> remove Diamonds</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/item restocked <span class="arg"><name></span> <span class="arg"><amount></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Adds stock to an item.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">item</span> restocked Diamonds 50</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 id="subscriptions">Subscriptions / Rentals</h2>
+            <span class="count">9 commands</span>
+          </div>
+          <table class="cmd-table">
+            <thead>
+              <tr><th>Command</th><th>Access</th><th>Description</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/subscription add <span class="arg">@member</span> [amount]</code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Adds rental tokens (default 1 ≈ 30 days).</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">subscription</span> add @Elite 2</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/subscription remove <span class="arg">@member</span> [amount]</code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Removes rental tokens.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">subscription</span> remove @Elite 1</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/mysubscription</code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Shows your rental tokens.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">mysubscription</span></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/session add <span class="arg"><item></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Adds gear to the rental session.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">session</span> add sword</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/session remove <span class="arg"><item></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Removes gear from the rental session.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">session</span> remove sword</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/session check</code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Checks current session status.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">session</span> check</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/session start <span class="arg"><hours></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Starts a timed session.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">session</span> start 3</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/session stop</code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Stops the active session.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">session</span> stop</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/session history</code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Shows past session history.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">session</span> history</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 id="fun">Fun</h2>
+            <span class="count">4 commands</span>
+          </div>
+          <table class="cmd-table">
+            <thead>
+              <tr><th>Command</th><th>Access</th><th>Description</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/coins add <span class="arg">@member</span> <span class="arg"><amount></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Adds Discord coins.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">coins</span> add @Elite 50</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/coins remove <span class="arg">@member</span> <span class="arg"><amount></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Removes Discord coins.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">coins</span> remove @Elite 25</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/coins bal</code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Shows your coin balance.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">coins</span> bal</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/cf <span class="arg"><bet></span></code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">50/50 coin flip — win double, lose the bet.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">cf</span> 25</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 id="giveaways">Giveaways</h2>
+            <span class="count">3 commands</span>
+          </div>
+          <table class="cmd-table">
+            <thead>
+              <tr><th>Command</th><th>Access</th><th>Description</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/gw start <span class="arg"><#channel></span> <span class="arg"><days></span> <span class="arg"><winners></span> <span class="arg"><prize></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Starts a giveaway (members react 🎉 to enter).</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">gw</span> start #giveaways 3 1 100</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/gw reroll <span class="arg"><msg_id></span> [winners]</code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Rerolls giveaway winners.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">gw</span> reroll 123456789 2</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/gw end <span class="arg"><msg_id></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Ends a giveaway early.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">gw</span> end 123456789</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 id="tags">Custom Commands (tags)</h2>
+            <span class="count">3 commands</span>
+          </div>
+          <table class="cmd-table">
+            <thead>
+              <tr><th>Command</th><th>Access</th><th>Description</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/cmd add <span class="arg"><name></span> <span class="arg"><content></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Creates a custom tag. Trigger it by typing <code class="cmd-name">.name</code> in chat.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">cmd</span> add website Check Mihu&apos;s website at https://www.ro-mihaiu.xyz/</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/cmd remove <span class="arg"><name></span></code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Deletes a custom tag.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">cmd</span> remove website</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/cmd list</code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Lists all custom tags.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">cmd</span> list</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="note">
+            <span class="note-emoji">💡</span>
+            <span><strong>How tags work:</strong> after <code class="cmd-name">/cmd add website <message></code>,
+            any member can type <code class="cmd-name">.website</code> in chat and the bot replies with the stored message.</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 id="utility">Utility</h2>
+            <span class="count">2 commands</span>
+          </div>
+          <table class="cmd-table">
+            <thead>
+              <tr><th>Command</th><th>Access</th><th>Description</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">/update</code></td>
+                <td data-label="Access"><span class="badge badge-staff">Staff</span></td>
+                <td data-label="Description">Force-updates dashboard channels.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">/</span><span class="slash">update</span></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Command"><code class="cmd-name">.help</code></td>
+                <td data-label="Access"><span class="badge badge-everyone">Everyone</span></td>
+                <td data-label="Description">Shows the prefix command help text.</td>
+                <td data-label="Examples">
+                  <div class="examples">
+                    <span class="example"><span class="prompt">.</span><span class="slash">help</span></span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Prefix equivalents -->
+        <div class="card">
+          <div class="card-header">
+            <h2 id="prefix">Prefix equivalents</h2>
+            <span class="count">Slash ↔ Prefix</span>
+          </div>
+          <p class="section-block" style="margin-top:0; color:var(--text-dim); line-height:1.7;">
+            Both <strong style="color:#fff">slash commands</strong> (<code class="cmd-name">/command</code>)
+            and <strong style="color:#fff">prefix commands</strong> (<code class="cmd-name">.command</code>) work
+            and are equivalent. Here&rsquo;s how they map:
+          </p>
+          <table class="cmd-table" style="margin-top:1rem;">
+            <thead>
+              <tr><th>Slash</th><th>Prefix</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Slash"><code class="cmd-name">/verify Mihaitzuuu Celestial</code></td>
+                <td data-label="Prefix"><code class="cmd-name">.verify Mihaitzuuu Celestial</code></td>
+              </tr>
+              <tr>
+                <td data-label="Slash"><code class="cmd-name">/points view</code></td>
+                <td data-label="Prefix"><code class="cmd-name">.points view</code></td>
+              </tr>
+              <tr>
+                <td data-label="Slash"><code class="cmd-name">/warn add @Elite reason</code></td>
+                <td data-label="Prefix"><code class="cmd-name">.warn @Elite reason</code></td>
+              </tr>
+              <tr>
+                <td data-label="Slash"><code class="cmd-name">/cmd add website <msg></code></td>
+                <td data-label="Prefix"><code class="cmd-name">.cmd add website <msg></code></td>
+              </tr>
+              <tr>
+                <td data-label="Tag"><code class="cmd-name">—</code></td>
+                <td data-label="Prefix"><code class="cmd-name">.website</code> triggers a custom tag</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note" style="margin-top:1.5rem;">
+          <span class="note-emoji">🌸</span>
+          <span><strong>Legend:</strong>
+            <span class="badge badge-staff">Staff</span>&nbsp; = staff-only ·
+            <span class="badge badge-everyone">Everyone</span>&nbsp; = available to all members.
+            Angles <code class="cmd-name"><required></code> mean a required argument; brackets
+            <code class="cmd-name">[optional]</code> mean optional.</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h4>MIHULISH</h4>
+          <p>The Discord bot for the MIHU player-warp server. Verify, get rewarded, rent gear, and play.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Bot</h5>
+          <ul>
+            <li><a href="index.html">Commands</a></li>
+            <li><a href="../about/index.html">About</a></li>
+            <li><a href="../tos/index.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Main Site</h5>
+          <ul>
+            <li><a href="https://ro-mihaiu.xyz" target="_blank" rel="noopener noreferrer">ro-mihaiu.xyz</a></li>
+            <li><a href="https://ro-mihaiu.xyz/player-warps" target="_blank" rel="noopener noreferrer">Player Warps</a></li>
+            <li><a href="https://ro-mihaiu.xyz/tos" target="_blank" rel="noopener noreferrer">Site ToS</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
